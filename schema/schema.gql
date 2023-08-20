@@ -1,0 +1,79 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  hello: String!
+  number: Int!
+  float: Float!
+  isCool: Boolean!
+  list: [String!]!
+  products: [Product!]!
+  categories: [Category!]!
+  reviews: [Review!]!
+  product(id: String!): Product!
+  category(id: String!): Category!
+  review(id: String!): Review!
+}
+
+type Mutation {
+  addCategory(input: CategoryInput!): Category!
+  addProduct(input: ProductInput!): Product!
+  addReview(input: ReviewInput!): Review!
+
+  updateCategory(id: String!, input: CategoryInput!): String!
+  updateProduct(id: String!, input: ProductInput!): String!
+  updateReview(id: String!, input: ReviewInput!): String!
+
+  deleteCategory(id: String!): String!
+  deleteProduct(id: String!): String!
+  deleteReview(id: String!): String!
+}
+
+type Category {
+  id: String!
+  name: String!
+}
+
+input CategoryInput {
+  name: String!
+}
+
+type Product {
+  id: String!
+  name: String!
+  description: String!
+  quantity: Int!
+  price: Float!
+  image: String!
+  onSale: Boolean!
+  categoryId: String!
+}
+
+input ProductInput {
+  name: String!
+  description: String!
+  quantity: Int!
+  price: Float!
+  image: String!
+  onSale: Boolean!
+  categoryId: String!
+}
+
+type Review {
+  id: String!
+  date: String!
+  title: String!
+  comment: String!
+  rating: Int!
+  productId: String!
+}
+
+input ReviewInput {
+  date: String!
+  title: String!
+  comment: String!
+  rating: Int!
+  productId: String!
+}

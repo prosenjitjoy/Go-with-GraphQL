@@ -1,0 +1,174 @@
+_type: export
+__export_format: 4
+__export_date: 2023-08-20T15:17:37.329Z
+__export_source: insomnia.desktop.app:v2023.5.2
+resources:
+  - _id: req_f808034e47ee4c8cbbd4730089f9a202
+    parentId: wrk_d19b3f2fddc943bf9d39f7d8d9edebb3
+    modified: 1692544353918
+    created: 1692524670406
+    url: localhost:5000/query
+    name: Query Products
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query {\n# \tproducts {\n# \t\tid\n# \t\tname\n#
+        \t\tdescription\n# \t\tquantity\n# \t\tprice\n# \t\timage\n#
+        \t\tonSale\n# \t\tcategoryId\n# \t}\n\tproduct(id:
+        \"e9ce2fb5-e17e-451f-a6fb-25698fd400e4\")
+        {\n\t\tid\n\t\tname\n\t\tdescription\n\t}\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: Insomnia/2023.5.2
+    authentication: {}
+    metaSortKey: -1692524670406
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_d19b3f2fddc943bf9d39f7d8d9edebb3
+    parentId: null
+    modified: 1692450706487
+    created: 1692450706487
+    name: GraphQL
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_daeb7fb96001463f88fd7f8e577a1d73
+    parentId: wrk_d19b3f2fddc943bf9d39f7d8d9edebb3
+    modified: 1692543798603
+    created: 1692528616201
+    url: localhost:5000/query
+    name: Mutation
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"# mutation {\n# \taddProduct(input: {\n# \t\tname: \"test\",\n#
+        \t\tdescription: \"test\",\n# \t\tquantity: 2,\n# \t\tprice: 2.7,\n#
+        \t\timage: \"no\",\n# \t\tonSale: false,\n# \t\tcategoryId:
+        \"44814a94-a436-46d9-a1e7-134bd8e8778f\"\n# \t}) {\n# \t\tid\n#
+        \t\tname\n# \t\tdescription\n# \t\tquantity\n# \t\tprice\n# \t\timage\n#
+        \t\tonSale\n# \t\tcategoryId\n# \t}\n# }\n\n# mutation {\n#
+        \taddCategory(input: {\n# \t\tname: \"Garden new\"\n# \t}) {\n#
+        \t\tid\n# \t\tname\n# \t}\n# }\n\n# mutation {\n# \taddReview(input:
+        {\n# \t\tdate: \"20-08f-23\",\n# \t\ttitle: \"ttitle\",\n# \t\tcomment:
+        \"view comment\",\n# \t\trating: 4,\n# \t\tproductId:
+        \"cd1d-4638-a035-1f4083dd13fb\"\n# \t}) {\n# \t\tid\n# \t\ttitle\n#
+        \t}\n# }\n\nmutation {\n# \tdeleteReview(id:
+        \"75c2ad13-542e-4af1-94ce-f760362f743b\")\n# \tdeleteCategory(id:
+        \"5fe35311-5f70-4067-b1e2-b2b63ded613d\")\n# \tdeleteProduct(id:
+        \"4707377f-3eb1-48b0-9491-369ece37b095\")\n\t\n# \tupdateCategory(\n#
+        \t\tid: \"1f3bcc97-fdc4-40a9-9eab-05b41e4b0efa\",\n# \t\tinput: {\n#
+        \t\t\tname: \"Garden and farming\"\n# \t\t}\n# \t)\n\t\n#
+        \tupdateReview(\n# \t\tid: \"0e4ec81b-4c9d-4c9c-8bf0-38b11e6b43de\",\n#
+        \t\tinput: {\n# \t\t\tdate: \"20-08-23\",\n# \t\t\ttitle: \"title\",\n#
+        \t\t\tcomment: \"view comment\",\n# \t\t\trating: 4,\n# \t\t\tproductId:
+        \"cd1d-4638-a035-1f4083dd13fb\"\n# \t\t}\n#
+        \t)\n\t\n\tupdateProduct(\n\t\tid:
+        \"e9ce2fb5-e17e-451f-a6fb-25698fd400e4\",\n\t\tinput: {\n\t\t\tname:
+        \"test name\",\n\t\t\tdescription: \"test
+        description\",\n\t\t\tquantity: 2,\n\t\t\tprice: 2.7,\n\t\t\timage:
+        \"image.jpg\",\n\t\t\tonSale: true,\n\t\t\tcategoryId:
+        \"44814a94-a436-46d9-a1e7-134bd8e8778f\"\n\t\t}\n\t)\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: Insomnia/2023.5.2
+    authentication: {}
+    metaSortKey: -1692525656854.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_66c7065b47de4ea8b753db996fa49a4b
+    parentId: wrk_d19b3f2fddc943bf9d39f7d8d9edebb3
+    modified: 1692544565372
+    created: 1692530581873
+    url: localhost:5000/query
+    name: Query Categories
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query {\n# \tcategories {\n# \t\tid\n# \t\tname\n#
+        \t}\n\t\n\tcategory(id: \"92c26a31-291d-42ec-b1a1-8d8f528b8ce8\")
+        {\n\t\tname\n\t}\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: Insomnia/2023.5.2
+    authentication: {}
+    metaSortKey: -1692524670356
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d7783bae626c4c1c93b8cc88943fc067
+    parentId: wrk_d19b3f2fddc943bf9d39f7d8d9edebb3
+    modified: 1692544617529
+    created: 1692531340629
+    url: localhost:5000/query
+    name: Query Reviews
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query {\n# \treviews {\n# \t\tid\n# \t\tdate\n# \t\ttitle\n#
+        \t\tcomment\n# \t\trating\n# \t\tproductId\n# \t}\n\treview(id:
+        \"0e4ec81b-4c9d-4c9c-8bf0-38b11e6b43de\")
+        {\n\t\tdate\n\t\ttitle\n\t\tcomment\n\t\trating\n\t\tproductId\n\t}\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: Insomnia/2023.5.2
+    authentication: {}
+    metaSortKey: -1692531340629
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_79a938d332a9985681fc9ccab3573aaacce65c9d
+    parentId: wrk_d19b3f2fddc943bf9d39f7d8d9edebb3
+    modified: 1692450706489
+    created: 1692450706489
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1692450706489
+    _type: environment
+  - _id: jar_79a938d332a9985681fc9ccab3573aaacce65c9d
+    parentId: wrk_d19b3f2fddc943bf9d39f7d8d9edebb3
+    modified: 1692450706491
+    created: 1692450706491
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
